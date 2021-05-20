@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+header{
+    font-size:20px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    background:white;
+    z-index:10; 
+    height:10vh;
+    background:rgba(0, 0, 0, 0.8);
+}
+#header-left,#header-right{
+    display:flex;
+    align-items:center;
+}
+#header-left{
+    margin-left:50px;
+}
+
+#header-left p{
+    color:rgb(160, 221, 39);
+}
+#logo-name{
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    padding:5px 11px;
+    border-radius: 50%;
+    border:2px solid rgb(160, 221, 39);
+}
+
+
+#header-right{
+    margin-right:50px;
+}
+#header-right>a,#resumeButton{
+    font-weight: bold;
+    margin:0 50px;
+    background:rgb(160, 221, 39);
+    padding:10px;
+    transition:all 0.1s;
+    animation:linksanim 0.4s linear 1;
+}
+#header-right > a:hover,#resumeButton:hover{
+    padding:5px 10px;
+}
+#resumeButton{
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    outline:none;
+    border:none;
+    font-size:18px;
+    font-style: italic;
+}
+#ham{
+    display:none;
+}
+
+#s1{
+    font-size:1.2em;
+    position:relative;
+    padding:100px 50px;
+    background:white;
+    flex-direction: column;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("stars.gif");
+    height:90vh;
+}
+
+
+#profileImg{
+    height:200px;
+    width:200px;
+    border-radius:50%;
+    animation:profileanim 1s ease-in-out 1 forwards;
+}
+@keyframes profileanim{
+    from{
+    
+        transform:translate(-450px,0) rotateY(0deg);
+    }
+    to{   
+
+        transform:translate(0,0) rotateY(360deg);
+    }
+}
+
+#about-me{
+    color:white;
+    height:20vh;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top:100px;
+}
+span{
+    color:rgb(160, 221, 39);
+}
+#about-me h3{
+    margin:5px 0;
+}
+#about-me a{
+    margin:5px 0;
+    color:rgb(160, 221, 39);
+}
+#down-arrow{
+    cursor:pointer;
+    margin-top: 50px;
+    height:50px;
+    width:50px;
+}
+#s3{
+    background:rgba(0, 0, 0, 0.8);
+}
+#s3>h2{
+    text-align:center;
+    color:white;
+    background:rgb(160, 221, 39);
+    font-size: 35px;
+    padding:20px 0;
+}
+
+.container{
+    display:flex;
+    justify-content: space-around;
+}
+.projects>h2{
+    margin-top:50px;
+    text-align: center;
+    color:rgb(160, 221, 39);
+}
+#html-projects{
+    justify-content: center;
+}
+.project-box{
+    position:relative;
+    margin:25px;
+}
+.project-info{
+    position:absolute;
+    top:0;
+    bottom:0;
+    padding:50px;
+    color:white;
+    background:rgba(0, 0, 0, 0.85);
+    display: none;
+}
+.project-pics:hover + .project-info{
+    display:block;
+}
+.project-title{
+    color:rgb(160, 221, 39);
+    text-align: center;
+}
+.project-info>a{
+    display:block;
+    width:100px;
+    margin:0 auto;
+    font-size:15px;
+    padding:7px;
+    color:rgb(160, 221, 39);
+    background:black;
+}
+.project-info>a:hover{
+    color:white;
+}
+.desc{
+    margin-top:20px;
+    font-weight: bold;
+}
+.project-pics{
+    background-image: url("stars.gif");
+    width:400px;
+
+}
+.project-pics img{
+    display: block;
+    padding:15px;
+    width:100%;
+    margin:auto;
+    height:270px;
+    cursor:pointer;
+}
+
+
+
+
+#s4{
+    width:100%;
+    background:rgb(160,221,39);
+}
+#s4 p{
+    text-align:center;
+    font-weight: bold;
+    font-size:40px;
+    padding-top:50px;
+    color:rgba(0, 0, 0, 0.8);
+ 
+}
+#s4>form{
+    height:50vh;
+    width:400px;
+    margin:auto;  
+}
+#s4 input{
+    height:5vh;
+}
+#s4 input,textarea{
+    border:none;
+    outline:none;
+    margin:8px;
+    display: block;
+    width:95%;
+    background:white;
+    color:white;
+    padding:5px;
+    background:rgba(0,0,0,0.8);
+}
+textarea{
+    height:10vh;
+}
+
+#s4 button{
+    padding:10px 0;
+    margin:5px;
+    width:95%;
+    background:black;
+    border:2px solid rgb(160, 221, 39);
+    color:rgb(160, 221, 39);
+    cursor:pointer;
+    font-size:15px;
+}
+::placeholder{
+    color:darkgrey;
+}
+#s4 button:hover{
+    background:rgb(160, 221, 39);
+    color:black;
+    border:2px solid black;
+}
+footer{
+    background:rgba(0,0,0,0.8);
+    padding:50px;
+    
+}
+#social-media-links{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+#social-media-links a>i{
+    font-size: 50px;
+    margin:0 10px;
+    padding:10px;
+    border-radius:50%;
+}
+.fa-linkedin:hover{
+    background:#0e76a8;
+    color:white;
+}
+.fa-twitter:hover{
+    background:#1877f2;
+    color:white;
+}
+
+.fa-linkedin{
+    color: #0e76a8;
+}
+.fa-twitter{
+   color: #1877f2;
+}
+.fa-github:hover{
+    background:black;
+    color:grey;
+}
+
+footer #name{
+    text-align:center;
+    color:rgb(160, 221, 39);
+    font-weight:bolder;
+    padding:10px 0;
+}
+#footer-logo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(160, 221, 39);
+}
+
+
+
+@media only screen and (max-width:600px){
+    #header-right{
+        background-color:rgb(160, 221, 39);
+        z-index:1;
+        flex-direction: column;
+        position:absolute;
+        height:35vh;
+        left:0;
+        top:15vh;
+        right:0;
+        margin:auto;
+        justify-content:space-around;
+        display: none;
+    }
+    #ham{
+        display:block;
+        position: absolute;
+        right:30px;
+        font-size: 30px;
+        color:rgb(160, 221, 39);
+        cursor:pointer;
+    }
+    #header-right>a{
+        background-image:url("stars.gif");
+        color:rgb(160, 221, 39);
+    }
+    #header-right>a:hover{
+        padding:5px;
+    }
+  
+    .container{
+        flex-direction: column;
+    }
+    #s4>form{
+        width:350px;
+    }
+    .project-box{
+        
+        margin:25px 0;
+
+    }
+    .project-info{
+        padding:20px;
+    }
+    .project-pics{
+        width:340px;
+        margin:auto;
+    }
+    .project-pics img{
+        padding:10px;
+        height:200px;
+        cursor:pointer;
+    }
+    
+
+}
