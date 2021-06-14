@@ -9,6 +9,13 @@
     <title>Prabhjot Singh - PortFolio</title>
 </head>
 <body>
+        <div id="rocketlaunch">
+            <img class="coverpic" src="Picture2.jpg">
+            <img id="pic2" src="rocketlaunch.gif">
+            <img class="coverpic" src="Picture2.jpg">
+        </div>
+    <div id="welcome">WELCOME TO MY WEBSITE</div>
+    <div>
     <header>
         <div id="header-left">   
             <p id="logo-name">P</p>
@@ -187,7 +194,7 @@
         <p id="logo-name">P</p>
     </div>
     </footer>
-
+</div>
 
     <script>
         // code for displaying hamburger menu on mobile devices
@@ -203,7 +210,17 @@
             }
         })
 
-        
+        // code for loader
+        const rocketImg = document.getElementById("rocketlaunch");
+        const welcome = document.getElementById("welcome");
+
+        setTimeout(()=>{
+            rocketImg.remove()
+            welcome.style.display="block";
+            setTimeout(()=>{
+            welcome.style.display="none";
+            },1000)
+        },2500)
     </script>
 
 </body>
